@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "424525351410",
+    "firebase_url": "https://bts530.firebaseio.com",
+    "project_id": "bts530",
+    "storage_bucket": "bts530.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:424525351410:android:6792b31f36a90e8a47836b",
+        "android_client_info": {
+          "package_name": "com.example.bts530"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "424525351410-9vn0od9je6idf4qqrrcc3t5r95k77mdl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bts530",
+            "certificate_hash": "7fec9fa4a240e2e1cacc7b9256b46599b3339fff"
+          }
+        },
+        {
+          "client_id": "424525351410-5crbvujvpvgqvh86mcc50stp8lerq7c2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiru_uKzldrHVQbFGBrgUN_0yKrut01Wo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "424525351410-5crbvujvpvgqvh86mcc50stp8lerq7c2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
