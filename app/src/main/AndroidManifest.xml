@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".customer_profile"></activity>
+        <activity android:name=".Checkout"></activity>
+
+        <activity android:name=".BusinessProfile" />
+
+        <activity android:name=".customer_profile" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".CustomerRegisterActivity" />
         <activity android:name=".business_register" />
@@ -23,6 +27,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
     </application>
 
 </manifest>

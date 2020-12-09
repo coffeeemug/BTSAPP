@@ -1,10 +1,5 @@
 package com.example.bts530;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-//import com.google.android.gms.tasks.Task;
-//import com.google.firebase.*;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,22 +9,19 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
     TextView loginText;
     EditText email;
     EditText password;
-    Button register;
+    Button registeruser;
+    Button registerbus;
     Button login;
     ProgressBar progressbar;
 
-    FirebaseAuth firebaseAuth;
-
+    UserDBManager dbManagerU;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,40 +30,40 @@ public class LoginActivity extends AppCompatActivity {
         loginText = findViewById(R.id.logintxt);
         email = findViewById(R.id.editTextTextEmailAddress);
         password = findViewById(R.id.editTextTextPassword);
-        register = findViewById(R.id.registerbttn);
+        registeruser = findViewById(R.id.registerbttn);
+        registerbus = findViewById(R.id.registerbttn2);
         login = findViewById(R.id.loginbttn);
         progressbar = findViewById(R.id.progressBar);
 
-        firebaseAuth = FirebaseAuth.getInstance();
+        dbManagerU = new UserDBManager(this, null, null, 1);
 
-        register.setOnClickListener(new View.OnClickListener(){
+
+        registeruser.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view) {
 
-                progressbar.setVisibility(View.VISIBLE);
+                //progressbar.setVisibility(View.VISIBLE);
 
-                firebaseAuth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
+                UserAccounts user = new UserAccounts(email.getText().toString());
+                dbManagerU.addUser(user);
 
-                        progressbar.setVisibility(View.GONE);
+                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                startActivity(intent);
 
-                        if(task.isSuccessful()){
+            }
 
-                            Toast.makeText(LoginActivity.this, "Registered Successfully", Toast.LENGTH_LONG).show();
-                            email.setText("");
-                            password.setText("");
+        });
 
-                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                            startActivity(intent);
-                        }
-                        else{
+        registerbus.setOnClickListener(new View.OnClickListener(){
 
-                            Toast.makeText(LoginActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
-                        }
-                    }
-                });
+            @Override
+            public void onClick(View view) {
+
+                //progressbar.setVisibility(View.VISIBLE);
+
+                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -82,17 +74,10 @@ public class LoginActivity extends AppCompatActivity {
 
                 progressbar.setVisibility(View.VISIBLE);
 
-                firebaseAuth.signInWithEmailAndPassword(email.getText().toString(), password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
+                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                startActivity(intent);
 
-                        if(task.isSuccessful()){
-
-                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                            startActivity(intent);
-                        }
-                    }
-                });
+                Toast.makeText(LoginActivity.this,"Successfully logged In", Toast.LENGTH_SHORT).show();
             }
         });
     }

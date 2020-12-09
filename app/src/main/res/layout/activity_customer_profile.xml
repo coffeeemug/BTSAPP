@@ -8,13 +8,13 @@
     tools:context=".customer_profile">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/profpc"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="21dp"
         android:layout_marginLeft="21dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/profpic"
+        android:background="@drawable/prfpic"
         app:layout_constraintEnd_toStartOf="@+id/profile_address"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <ListView
-        android:id="@+id/cars_list"
+        android:id="@+id/car_list"
         android:layout_width="wrap_content"
         android:layout_height="600dp"
         android:layout_marginStart="1dp"
@@ -40,7 +40,7 @@
         android:layout_marginLeft="170dp"
         android:layout_marginTop="94dp"
         android:gravity="center"
-        android:text="User Full Address"
+        android:text="Seneca College"
         android:textColor="@color/design_default_color_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -53,8 +53,45 @@
         android:layout_marginLeft="170dp"
         android:layout_marginTop="40dp"
         android:gravity="center"
-        android:text="User Full Name"
+        android:text="Chike Browne"
         android:textColor="@color/design_default_color_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="411dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="671dp"
+        android:background="@color/common_google_signin_btn_text_dark_focused"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/homebttn"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:srcCompat="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/searchbttn"
+            android:layout_width="147dp"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:layout_column="1"
+            app:layout_row="0"
+            app:srcCompat="@drawable/search" />
+
+        <ImageView
+            android:id="@+id/profbttn"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:layout_column="2"
+            app:layout_row="0"
+            app:srcCompat="@drawable/profile" />
+    </androidx.gridlayout.widget.GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

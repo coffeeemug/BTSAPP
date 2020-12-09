@@ -3,37 +3,76 @@ package com.example.bts530;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+
+import java.util.ArrayList;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class customer_profile extends AppCompatActivity {
+
+    ImageView home;
+    ImageView search;
+    ImageView profile;
+
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_profile);
 
-        String [] cars = {"Car1", "Car2", "Car3","Car4", "Car5"};
+        home = findViewById(R.id.homebttn);
+        search = findViewById(R.id.searchbttn);
+        profile = findViewById(R.id.profbttn);
 
-        ListAdapter profileAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, cars);
-        ListView cars_listview = (ListView) findViewById(R.id.cars_list);
-        cars_listview.setAdapter(profileAdapter);
+        listView = findViewById(R.id.car_list);
 
-        cars_listview.setOnItemClickListener(
+        ArrayList<Cars> arraylist = new ArrayList<>();
 
-                new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        arraylist.add(new Cars(R.drawable.car1, "Mazda Rx7", "Green Mazda Rx7"));
+        arraylist.add(new Cars(R.drawable.car2, "370z", "Blue 370z"));
+        arraylist.add(new Cars(R.drawable.car3, "Subaru Impreza", "Camo Subaru Impreza"));
+        arraylist.add(new Cars(R.drawable.car4, "Nissan GTR", "Black Nissan GTR"));
+        arraylist.add(new Cars(R.drawable.car5, "Toyota Supra", "Purple Toyota Supra"));
 
-                        Intent intent = new Intent(customer_profile.this, HomeActivity.class);
-                        startActivity(intent);
-                    }
-                }
-        );
+        CarsAdapter carsAdapter = new CarsAdapter(this, R.layout.list_row,arraylist);
+        listView.setAdapter(carsAdapter);
+
+
+        search.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(customer_profile.this, HomeActivity.class);
+                startActivity(intent);
+            }
+
+        });
+
+        home.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(customer_profile.this, HomeActivity.class);
+                startActivity(intent);
+            }
+
+        });
+
+        profile.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(customer_profile.this, customer_profile.class);
+                startActivity(intent);
+            }
+
+        });
 
     }
 }
