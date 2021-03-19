@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".AcccptanceActivity">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginTop="671dp"
+        android:background="@color/common_google_signin_btn_text_dark_focused"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/homebttn"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:srcCompat="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/searchbttn"
+            android:layout_width="172dp"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:layout_column="1"
+            app:layout_row="0"
+            app:srcCompat="@drawable/search" />
+
+        <ImageView
+            android:id="@+id/profbttn"
+            android:layout_width="92dp"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:layout_column="2"
+            app:layout_row="0"
+            app:srcCompat="@drawable/profile" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id = "@+id/form_grid"
+            android:numColumns="2"
+            android:verticalSpacing="10dp">
+
+            <TextView
+                android:id="@+id/RequestForm_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_columnSpan="3"
+                android:layout_gravity="center"
+                android:verticalSpacing="50dp"
+                android:horizontalSpacing="10dp"
+                android:background="#000000"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="REQUEST FORM"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/customerName"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:verticalSpacing="50dp"
+                android:horizontalSpacing="10dp"
+                android:background="#000000"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Customer Name:"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/nameField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_columnSpan="2"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="Chike"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="#FFFFFF"
+                />
+
+
+            <TextView
+                android:id="@+id/cusPhone"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:padding="10dp"
+                android:text="Phone Number:"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:background="#000000"
+                />
+
+            <TextView
+                android:id="@+id/phoneField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_columnSpan="2"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="(647) 456-7890"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="#FFFFFF"
+                />
+
+            <TextView
+                android:id="@+id/cusService"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:padding="10dp"
+                android:text="Service:"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:background="#000000"/>
+            <TextView
+                android:id="@+id/serviceField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:layout_columnSpan="2"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="Wash"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="#FFFFFF"
+                />
+
+
+            <TextView
+                android:id="@+id/reqDate"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_row="4"
+                android:layout_column="0"
+                android:padding="10dp"
+                android:text="Date: "
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:background="#000000" />
+
+            <TextView
+                android:id="@+id/dateField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="4"
+                android:layout_column="1"
+                android:layout_columnSpan="2"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="18/02/2021"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="#FFFFFF"
+                />
+
+            <TextView
+                android:id="@+id/reqtime"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_row="5"
+                android:layout_column="0"
+                android:padding="10dp"
+                android:text="Time:"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:background="#000000"
+                />
+
+            <TextView
+                android:id="@+id/timeField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="5"
+                android:layout_column="1"
+                android:layout_columnSpan="2"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="3:00pm"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="#FFFFFF"
+                />
+
+            <TextView
+                android:id="@+id/carMake"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_row="6"
+                android:layout_column="0"
+                android:padding="10dp"
+                android:text="Car Make:"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:background="#000000"
+                />
+
+            <TextView
+                android:id="@+id/makeField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="6"
+                android:layout_column="1"
+                android:layout_columnSpan="2"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="Toyota"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="#FFFFFF"
+                />
+
+
+            <TextView
+                android:id="@+id/carModel"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_row="7"
+                android:layout_column="0"
+                android:padding="10dp"
+                android:text="Car Model:"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:background="#000000"
+                />
+
+            <TextView
+                android:id="@+id/modelField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="7"
+                android:layout_column="1"
+                android:layout_columnSpan="2"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="Supra"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="#FFFFFF"
+                />
+
+            <TextView
+                android:id="@+id/carColor"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_row="8"
+                android:layout_column="0"
+                android:padding="10dp"
+                android:text="Car Color:"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:background="#000000"
+                />
+
+
+            <TextView
+                android:id="@+id/colorField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="8"
+                android:layout_column="1"
+                android:layout_columnSpan="2"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="Red"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="#FFFFFF"
+                />
+
+            <TextView
+                android:id="@+id/carDes"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_row="9"
+                android:layout_column="0"
+                android:padding="10dp"
+                android:text="Description"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:background="#000000"
+                />
+
+            <TextView
+                android:id="@+id/descField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="9"
+                android:layout_column="1"
+                android:layout_columnSpan="2"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="Parked on the Left"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="#FFFFFF"
+                />
+
+            <View
+                android:id="@+id/spacer"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_row="10"
+                android:layout_column="0"
+                android:layout_columnSpan="3"
+                android:layout_gravity="center"
+                android:background="#FFFFFF"
+                >
+            </View>
+
+            <Button
+                android:id="@+id/acceptBttn"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_row="11"
+                android:layout_column="0"
+                android:layout_gravity="start"
+                android:padding="10dp"
+                android:background="#168700"
+                android:text="Accept"
+                android:textAllCaps="true"
+                android:textColor="@color/design_default_color_background"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/declineBttn"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_row="11"
+                android:layout_column="2"
+                android:padding="10dp"
+                android:background="#9b0a0a"
+                android:text="DECLINE"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+        </GridLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

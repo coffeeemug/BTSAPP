@@ -15,6 +15,7 @@ public class customer_profile extends AppCompatActivity {
     ImageView home;
     ImageView search;
     ImageView profile;
+    ImageView notify;
 
     ListView listView;
 
@@ -26,6 +27,7 @@ public class customer_profile extends AppCompatActivity {
         home = findViewById(R.id.homebttn);
         search = findViewById(R.id.searchbttn);
         profile = findViewById(R.id.profbttn);
+        notify= findViewById(R.id.notificationsPic);
 
         listView = findViewById(R.id.car_list);
 
@@ -69,6 +71,17 @@ public class customer_profile extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(customer_profile.this, customer_profile.class);
+                startActivity(intent);
+            }
+
+        });
+
+        notify.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(customer_profile.this, NotificationActivity.class);
                 startActivity(intent);
             }
 

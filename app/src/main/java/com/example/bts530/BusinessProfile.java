@@ -38,7 +38,7 @@ public class BusinessProfile extends AppCompatActivity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                        Intent intent = new Intent(BusinessProfile.this, Checkout.class);
+                        Intent intent = new Intent(BusinessProfile.this, request_form.class);
                         startActivity(intent);
                     }
                 }

@@ -17,10 +17,6 @@
 package de.cketti.mailto;
 
 
-import java.util.Collection;
-import java.util.LinkedHashSet;
-import java.util.Set;
-
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -29,6 +25,10 @@ import android.net.Uri;
 import android.util.Patterns;
 
 import org.jetbrains.annotations.NotNull;
+
+import java.util.Collection;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 
 /**
